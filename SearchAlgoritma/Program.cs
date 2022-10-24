@@ -108,7 +108,7 @@ namespace SearchAlgoritma
                 Console.WriteLine("3.Exit");
                 Console.Write("Enter your choice (1,2,3) :");
                 pilianmenu = Convert.ToInt32(Console.ReadLine());
-                
+
                 switch (pilianmenu)
                 {
                     case 1:
@@ -119,7 +119,7 @@ namespace SearchAlgoritma
                         myList.input();
                         myList.LinierSearch();
                         break;
-                    
+
                     case 2:
                         Console.WriteLine("");
                         Console.WriteLine("-------------------------");
@@ -138,7 +138,7 @@ namespace SearchAlgoritma
                 }
                 Console.WriteLine("\n\nPress Return to Exit.");
                 Console.ReadLine();
-            }while (pilianmenu != 3);
+            } while (pilianmenu != 3);
                    
         }
     }
