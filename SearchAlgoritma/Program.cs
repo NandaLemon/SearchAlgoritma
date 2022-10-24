@@ -30,7 +30,7 @@ namespace SearchAlgoritma
             Console.WriteLine("-----------------");
             for (i = 0; i < n; i++)
             {
-                Console.Write("<" +(i + 1) + ">");
+                Console.Write("<" + (i + 1) + ">");
                 string s1 = Console.ReadLine();
                 arr[i] = Int32.Parse(s1);
             }
@@ -82,18 +82,64 @@ namespace SearchAlgoritma
                 for (i = 0; i < n; i++)
                 {
                     ctr++;
-                    if (arr[i]==item)
+                    if (arr[i] == item)
                     {
-                        Console.WriteLine("\n" + item.ToString()+ "found st position"+(i + 1).ToString());
+                        Console.WriteLine("\n" + item.ToString() + "found st position" + (i + 1).ToString());
                         break;
                     }
                 }
                 if (i == n)
-                    Console.WriteLine("\n"+ item+ToString()+ "not found in the array");
+                    Console.WriteLine("\n" + item + ToString() + "not found in the array");
                 Console.WriteLine("\nNumber of comparision:" + ctr);
                 Console.Write("\nContinue search (y/n):");
                 ch = char.Parse(Console.ReadLine());
-            }while((ch == 'y')||(ch=='Y')):
+            } while ((ch == 'y') || (ch == 'Y'));
+        }
+        static void Main(string[] args)
+        {
+            Program myList = new Program();
+            int pilianmenu;
+            do
+            {
+                Console.WriteLine("Menu Option");
+                Console.WriteLine("========================");
+                Console.WriteLine("1.Linier Search");
+                Console.WriteLine("2.Binary Search");
+                Console.WriteLine("3.Exit");
+                Console.Write("Enter your choice (1,2,3) :");
+                pilianmenu = Convert.ToInt32(Console.ReadLine());
+                
+                switch (pilianmenu)
+                {
+                    case 1:
+                        Console.WriteLine("");
+                        Console.WriteLine("-------------------------");
+                        Console.WriteLine("linier Search");
+                        Console.WriteLine("-------------------------");
+                        myList.input();
+                        myList.LinierSearch();
+                        break;
+                    
+                    case 2:
+                        Console.WriteLine("");
+                        Console.WriteLine("-------------------------");
+                        Console.WriteLine("Binary Search");
+                        Console.WriteLine("-------------------------");
+                        myList.input();
+                        myList.BinarySearch();
+                        break;
+
+                    case 3:
+                        Console.WriteLine("exit.");
+                        break;
+                    default:
+                        Console.WriteLine("error");
+                        break;
+                }
+                Console.WriteLine("\n\nPress Return to Exit.");
+                Console.ReadLine();
+            }while (pilianmenu != 3);
+                   
         }
     }
 }
