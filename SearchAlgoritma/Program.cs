@@ -27,6 +27,7 @@ namespace SearchAlgoritma
             Console.WriteLine("");
             Console.WriteLine("-----------------");
             Console.WriteLine("Enter Array Element");
+            Console.WriteLine("-----------------");
         }
     }
 }
